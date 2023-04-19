@@ -68,28 +68,25 @@ ROC, i.e. Receiver Operating Characteristic curve is a graph of true positive ra
 
 The shape of a ROC curve suggests a binary classification model's ability to separate positive classes from negative classes. For example, the following illustration shows a binary classification model perfectly separates all the negative classes from all the positive classes:
 
-![image](https://user-images.githubusercontent.com/7329719/232595135-e8439078-8a13-4216-8b15-f5750b4d9c73.png)
+![AUCIdealClassSeparation](https://developers.google.com/static/machine-learning/glossary/images/AUCIdealClassSeparation.png)
 
 The ROC curve and the AUC (which is 1.0, the max possible value of AUC) for this unrealistically perfect model are shown in the following illustration:
-![image](https://user-images.githubusercontent.com/7329719/232595596-19ed7fb8-0077-4337-95c6-ebbfb9087332.png)
+
+![AUC1_0](https://developers.google.com/static/machine-learning/glossary/images/AUC1_0.png)
 
 
 On the other hand, the following illustration shows the raw and random values of a terrible model that can't separate negative classes from the positive classes at all:
-![image](https://user-images.githubusercontent.com/7329719/232595649-345017f4-74fb-47e3-a371-15a3cf053a69.png)
 
-
-
-
+![AUCSetupPNPNPN](https://developers.google.com/static/machine-learning/glossary/images/AUCSetupPNPNPN.png)
 
 The ROC curve and the AUC (which is 0.5) for this  model are shown in the following illustration:
-![image](https://user-images.githubusercontent.com/7329719/233121452-ec3d5399-1dc4-426b-a5c4-e2cba8cf0c8c.png)
 
-
-
+![AUC0_5](https://developers.google.com/static/machine-learning/glossary/images/AUC0_5.png)
 
 
 In the real world, most binary classification models separate positive and negative classes to some degree, but usually not perfectly. So, a typical ROC curve falls somewhere between the two extremes:
-![image](https://user-images.githubusercontent.com/7329719/232595762-b585bfb9-2b05-45fe-a6c2-26f04193bfaa.png)
+
+![ROCTypicalGraph](https://developers.google.com/static/machine-learning/glossary/images/ROCTypicalGraph.png)
 
 
 The point on an ROC curve closest to (0.0,1.0) theoretically identifies the ideal classification threshold. However, several other real-world issues influence the selection of the ideal classification threshold. For example, perhaps false negatives cause far more pain than false positives.
