@@ -102,5 +102,29 @@ The classification threshold is set by human and changing value of it directly i
 
 
 
+## What do you mean by exploding gradient and vanishing gradient problem? How they can be handled?
+
+As the backpropagation algorithm advances backward (or downwards) from the output layer towards the input layer, the gradients, in some cases, keep on getting larger and larger which in turn, causes very large weight updates and causes the gradient descent to diverge. Exploding gradient is the tendency for gradients in deep neural network to become surprisingly steep (high). Steep gradients often cause very large updates to the weights of each node in a deep neural network. 
+
+On the contrary, in some cases, the gradients keep on getting smaller and smaller and approach zero which eventually leaves the weights of the initial or lower layers nearly unchanged. As a result, the gradient descent never converges to the optimum. Vanishing gradient is the tendency for the gradients of early hidden layers of some deep neural networks to become surprisingly flat (low). Increasingly lower gradients result in increasingly smaller changes to the weights on nodes in a deep neural network, leading to little or no learning.
+
+Models suffering from both the problems become difficult or impossible to train.
 
 
+### Solutions:
+
+Exploding Gradient Problem:
+
+1. Gradient Clipping
+2. Batch Normalisation
+3. Proper weight initialisations
+4. L2 norm regularisations
+
+
+Vanishing Gradient Problem:
+
+1. ReLU as an activation function
+2. Reducing model complexity
+3. Weight initialisation with variance
+4. Better optimiser with a well-tuned learning rate
+5. Batch Normalisations
