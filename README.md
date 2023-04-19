@@ -82,7 +82,8 @@ On the other hand, the following illustration shows the raw and random values of
 
 
 The ROC curve and the AUC (which is 0.5) for this  model are shown in the following illustration:
-![image](https://user-images.githubusercontent.com/7329719/232595681-2a35b65e-90d8-453e-8162-ed5ff11adf71.png)
+![image](https://user-images.githubusercontent.com/7329719/233121452-ec3d5399-1dc4-426b-a5c4-e2cba8cf0c8c.png)
+
 
 
 
