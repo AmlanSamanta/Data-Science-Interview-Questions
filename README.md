@@ -26,10 +26,11 @@ Consider following example:
 
 Suppose our model is tasked with analysing and classifying 100 scans of tumours as malignant(positive class) and benign(negative class).   Let's say, the model is doing as following on the data:
 
-True Positive - Predicted: Malignant & Actual: Malignant -> 1
-False Positive - Predicted: Malignant & Actual: Benign -> 1
-False Negative - Predicted: Benign & Actual: Malignant -> 8
-True Negative - Predicted: Benign & Actual: Benign -> 90
+* True Positive - Predicted: Malignant & Actual: Malignant -> 1
+* False Positive - Predicted: Malignant & Actual: Benign -> 1
+* False Negative - Predicted: Benign & Actual: Malignant -> 8
+* True Negative - Predicted: Benign & Actual: Benign -> 90
+
 
 So the model's accuracy comes out to be:
 
@@ -113,18 +114,23 @@ Models suffering from both the problems become difficult or impossible to train.
 
 ### Solutions:
 
-Exploding Gradient Problem:
+***Exploding Gradient Problem:***
 
-1. Gradient Clipping
-2. Batch Normalisation
-3. Proper weight initialisations
-4. L2 norm regularisations
+**1. Gradient Clipping**
+
+It is one of the most effective ways to mitigate exploding gradient issue by capping all the components of gradient vectors, i.e. the partial derivatives to a predetermined gradient threshold during backpropagation so that they never exceed the threshold. It is specially used in RNN. 
+
+The threshold value is a hyperparameter. The clipping operation for the gradient vectors can be performed in various ways. One of the most common ways is to rescale them in such a way that the norm of the error gradient vector is at most the threshold. This ensures that no gradient has a norm greater than the threshold
+
+**2. Batch Normalisation**
+**3. Proper weight initialisations**
+**4. L2 norm regularisations**
 
 
-Vanishing Gradient Problem:
+***Vanishing Gradient Problem:***
 
-1. ReLU as an activation function
-2. Reducing model complexity
-3. Weight initialisation with variance
-4. Better optimiser with a well-tuned learning rate
-5. Batch Normalisations
+**1. ReLU as an activation function
+**2. Reducing model complexity
+**3. Weight initialisation with variance
+**4. Better optimiser with a well-tuned learning rate
+**5. Batch Normalisations
