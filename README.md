@@ -112,25 +112,33 @@ On the contrary, in some cases, the gradients keep on getting smaller and smalle
 Models suffering from both the problems become difficult or impossible to train.
 
 
-### Solutions:
+### Common Solutions:
 
-***Exploding Gradient Problem:***
+**Selecting proper network architecture**
 
-**1. Gradient Clipping**
+**Proper weight initialisations**
+
+**Selection of proper activation function**
+
+**Batch Normalisation**
+
+**Proper optimiser with a well-tuned learning rate**
+
+
+*** Specific to Exploding Gradient Problem:***
+
+**Gradient Clipping**
 
 It is one of the most effective ways to mitigate exploding gradient issue by capping all the components of gradient vectors, i.e. the partial derivatives to a predetermined gradient threshold during backpropagation so that they never exceed the threshold. It is specially used in RNN. 
 
 The threshold value is a hyperparameter. The clipping operation for the gradient vectors can be performed in various ways. One of the most common ways is to rescale them in such a way that the norm of the error gradient vector is at most the threshold. This ensures that no gradient has a norm greater than the threshold
 
-**2. Batch Normalisation**
-**3. Proper weight initialisations**
-**4. L2 norm regularisations**
+**L2 norm regularisations**
 
 
-***Vanishing Gradient Problem:***
 
-**1. ReLU as an activation function
-**2. Reducing model complexity
-**3. Weight initialisation with variance
-**4. Better optimiser with a well-tuned learning rate
-**5. Batch Normalisations
+
+
+***Specific to Vanishing Gradient Problem:***
+
+**Reducing model complexity**
